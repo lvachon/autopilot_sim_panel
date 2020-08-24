@@ -1,0 +1,46 @@
+ap buttons
+
+vspd hold
+vspd knob
+(vspd sync)
+
+hdn hold
+hdn knob
+(hdn sync)
+nav hold
+nav/gps
+
+alt hold
+alt knob
+(alt sync)
+
+spd hold
+spd knob
+(spd a/t/sync)
+
+crs knob
+(crs click)
+apr mode
+
+ap tog
+fd tog
+yd tog
+
+= 15 momentary + 5 quadrature
+= 15 polled + 5 interrupt
+= 4 addr pin + 1 sense pin + 5 interrupt pins
+= 10 GPIO pins + 3 x 3->8 Demux -or-
+= 20 GPIO pins
+
+Parts: 
+10x tactile switches ~ $5
+5x Rotary Encoder ~10
+1x Teensy ~20
+(20x) pullup/down resistors ~0
+10x (TPU) button caps? (3d Print) ~0
+5x Knobs (3d print) ~0
+1x case (3d print) ~0
+assorted hardware, wire, and glue ~0
+time ~?~
+
+
