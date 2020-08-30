@@ -30,7 +30,7 @@ yd tog
 = 15 polled + 5 interrupt
 = 4 addr pin + 1 sense pin + 5 interrupt pins
 = 10 GPIO pins + 3 x 3->8 Demux -or-
-= 20 GPIO pins
+= 25 GPIO pins
 
 Parts: 
 10x tactile switches ~ $5
