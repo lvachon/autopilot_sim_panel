@@ -357,7 +357,6 @@ F 3 "" H 3000 5200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 NoConn ~ 4200 5400
-NoConn ~ 5400 2900
 NoConn ~ 4200 5200
 $Comp
 L power:GND #PWR01
@@ -616,4 +615,17 @@ Wire Wire Line
 	5150 4750 5150 7400
 Wire Wire Line
 	5150 7400 2800 7400
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5F4E6971
+P 5000 3050
+F 0 "J1" H 4918 2825 50  0000 C CNN
+F 1 "Conn_01x01" H 4918 2916 50  0000 C CNN
+F 2 "TestPoint:TestPoint_THTPad_2.0x2.0mm_Drill1.0mm" H 5000 3050 50  0001 C CNN
+F 3 "~" H 5000 3050 50  0001 C CNN
+	1    5000 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 3050 5200 3050
 $EndSCHEMATC
