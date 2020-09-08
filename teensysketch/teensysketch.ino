@@ -86,9 +86,13 @@ void rotB(){
   boolean a = digitalRead(K12B);
   interrupts();
   if(a){
-    buttonPushFrames[17]=4;
+    if(buttonPushFrames[18]<=0){
+      buttonPushFrames[17]=BPL;
+    }
   }else{
-    buttonPushFrames[18]=4;
+    if(buttonPushFrames[17]<=0){
+      buttonPushFrames[18]=BPL;
+    }
   }
   interrupts();
 }
@@ -101,9 +105,13 @@ void rotC(){
   boolean a = digitalRead(K13B);
   interrupts();
   if(a){
-    buttonPushFrames[19]=4;
+    if(buttonPushFrames[20]<=0){
+      buttonPushFrames[19]=BPL;
+    }
   }else{
-    buttonPushFrames[20]=4;
+    if(buttonPushFrames[19]<=0){
+      buttonPushFrames[20]=BPL;
+    }
   }
   interrupts();
 }
@@ -116,9 +124,13 @@ void rotD(){
   boolean a = digitalRead(K14B);
   interrupts();
   if(a){
-    buttonPushFrames[21]=4;
+    if(buttonPushFrames[22]<=0){
+      buttonPushFrames[21]=BPL;
+    }
   }else{
-    buttonPushFrames[22]=4;
+    if(buttonPushFrames[21]<=0){
+      buttonPushFrames[22]=BPL;
+    }
   }
   interrupts();
 }
@@ -131,9 +143,13 @@ void rotE(){
   boolean a = digitalRead(K15B);
   interrupts();
   if(a){
-    buttonPushFrames[23]=4;
+    if(buttonPushFrames[24]<=0){
+      buttonPushFrames[23]=BPL;
+    }
   }else{
-    buttonPushFrames[24]=4;
+    if(buttonPushFrames[23]<=0){
+      buttonPushFrames[24]=BPL;
+    }
   }
   interrupts();
 }
