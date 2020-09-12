@@ -23,7 +23,8 @@
 #define BT15 12
 #define K15B 11
 #define K15A 10
-#define BPL 4
+#define BPL 1
+#define DLYA 30
 
 int buttonPushFrames[32];
 int buttons[]= {BT1,BT2,BT3,BT4,BT5,BT6,BT7,BT8,BT9,BT10,BT11,BT12,BT14,BT15};
@@ -52,16 +53,19 @@ void loop() {
     if(buttonPushFrames[i]>0){
       Joystick.button(i,1);
       buttonPushFrames[i]--;
-    }else{
-      Joystick.button(i,0);
     }
   }
-  delay(15);
+  delay(30);
+  for(int i=15;i<25;i++){
+    Joystick.button(i,0);
+  }
 }
 
 unsigned long lastRotA=0;
 void rotA(){
-  if(lastRotA>millis()-15){return;}
+  if(lastRotA>millis()-DLYA){return;}
+  delay(1);
+  if(digitalRead(K11A)){return;}
   lastRotA=millis();
   noInterrupts();
   boolean a = digitalRead(K11B);
@@ -80,7 +84,9 @@ void rotA(){
 
 unsigned long lastRotB=0;
 void rotB(){
-  if(lastRotB>millis()-15){return;}
+  if(lastRotB>millis()-DLYA){return;}
+  delay(1);
+  if(digitalRead(K12A)){return;}
   lastRotB=millis();
   noInterrupts();
   boolean a = digitalRead(K12B);
@@ -99,7 +105,9 @@ void rotB(){
 
 unsigned long lastRotC=0;
 void rotC(){
-  if(lastRotC>millis()-15){return;}
+  if(lastRotC>millis()-DLYA){return;}
+  delay(1);
+  if(digitalRead(K13A)){return;}
   lastRotC=millis();
   noInterrupts();
   boolean a = digitalRead(K13B);
@@ -118,7 +126,9 @@ void rotC(){
 
 unsigned long lastRotD=0;
 void rotD(){
-  if(lastRotD>millis()-15){return;}
+  if(lastRotD>millis()-DLYA){return;}
+  delay(1);
+  if(digitalRead(K14A)){return;}
   lastRotD=millis();
   noInterrupts();
   boolean a = digitalRead(K14B);
@@ -137,7 +147,9 @@ void rotD(){
 
 unsigned long lastRotE=0;
 void rotE(){
-  if(lastRotE>millis()-15){return;}
+  if(lastRotE>millis()-DLYA){return;}
+  delay(1);
+  if(digitalRead(K15A)){return;}
   lastRotE=millis();
   noInterrupts();
   boolean a = digitalRead(K15B);
